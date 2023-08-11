@@ -5,40 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ url_for('static', path='age-grp.css') }}" rel="stylesheet">
     <title>Document</title>
+    <style>
+        .quiz{
+            left: 700px;
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: absolute;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.quiz:hover {
+    background: rgba(137, 43, 226, 0.321);
+  color: #fefefeb8;
+}
+
+.quiz:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.quiz:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.quiz:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.quiz:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.quiz:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.quiz:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.quiz:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+    </style>
 </head>
 <body>
     <h1>Lets begin your financial journey</h1>
-
+    <a href="http://localhost:8000">
+        <button class="quiz" style="position: absolute; left: 193vh; top: 36px; border-radius: 4px;">Home Page</button>
+    </a>
 <div class="accordion">
   <div class="accordion-item">
     <div class="accordion-item-header">
-        What is financial literacy, and why is it important for me as an under 18?
+        What is a pension scheme, and why is it important for individuals planning for retirement?
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        Financial literacy means having the knowledge and skills to make informed decisions about money, budgeting, saving, and investing. It's important for young people like you because it helps you build a strong foundation for your financial future, make wise financial choices, and achieve your goals.
+        A pension scheme is a financial arrangement designed to provide income during retirement. It's important because it ensures individuals have a steady source of income after they stop working, helping them maintain their quality of life and cover expenses in their golden years.
         <iframe width="560" height="315" src="https://www.youtube.com/embed/QjxjnwTuK8E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <div class="accordion-item-header">
-        Can I invest my money even if I'm under 18?
+        What is the difference between a Defined Benefit (DB) and a Defined Contribution (DC) pension scheme?
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        Yes, you can! While you may not be able to open traditional investment accounts, you can learn about investment concepts and practice investing through simulated platforms. Our investment section can guide you through the basics.
+        In a Defined Benefit scheme, the employer promises a fixed pension amount based on factors like years of service and salary. In a Defined Contribution scheme, the individual contributes a set amount, and the eventual pension depends on how well the investments perform.
     </div>
     </div>
   </div>
   <div class="accordion-item">
     <div class="accordion-item-header">
-        What is a Student Loan?
+        What steps can individuals take to ensure their pension fund is on track for a comfortable retirement?
     </div>
     <div class="accordion-item-body">
       <div class="accordion-item-body-content">
-        A student loan is money borrowed to pay for educational expenses, such as tuition, books, and living costs. It's repaid with interest after the borrower completes their education.
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FzGhW8cbX2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+        Individuals should regularly review their pension fund's performance, adjust contributions as their financial situation changes, and consider consulting a financial advisor to ensure they're on track to meet their retirement goals.
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tGRIt8rMoc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     </div>
   </div>
@@ -61,6 +134,41 @@
       <div class="accordion-item-body-content">
         A bond is a debt security issued by governments or corporations. When you buy a bond, you're essentially lending money in exchange for periodic interest payments and the return of the principal when the bond matures.
       </div>
+    </div>
+  </div>
+</div>
+<a href="https://take.quiz-maker.com/QUFGLF896">
+    <button class="quiz">Test Yourself</button>
+</a>
+<br><br>
+<h1>Plan your retirement wisely</h1>
+
+<div class="accordion">
+    <div class="accordion-item">
+        <div class="accordion-item-header">
+            Benefits of NPS
+        </div>
+        <div class="accordion-item-body">
+          <div class="accordion-item-body-content">
+            <li>
+                <strong>Long-Term Savings for Retirement:</strong> NPS is designed to provide a regular income during retirement. It encourages individuals to save consistently over their working years, ensuring a financially secure retirement.
+            </li>
+            <li>
+                <strong>Tax Benefits:</strong>NPS offers tax benefits under different sections of the Income Tax Act. Contributions to NPS up to ₹1.5 lakh are eligible for deduction under Section 80C, and an additional deduction of up to ₹50,000 is available under Section 80CCD(1B) for contributions to the NPS Tier 1 account.
+            </li>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BFEi8y5gqwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+          </div>
+        </div>
+      </div>
+  <div class="accordion-item">
+    <div class="accordion-item-header">
+        Step by step procedure to open NPS account
+    </div>
+    <div class="accordion-item-body">
+      <div class="accordion-item-body-content">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BZKVVjBXwQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
     </div>
   </div>
 </div>
