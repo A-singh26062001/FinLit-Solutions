@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Redirect Example</title>
+    <style>
+        body {
+            font-family: Noto Sans;
+            text-align: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .big-button {
+            background-color: lightgrey;
+            color: black;
+            padding: 30px 20px;
+            cursor: pointer;
+            margin-top: 60px;
+            margin-left: 40px;
+            margin-right: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50px;
+            border-color: black;  
+            border: 1.5px solid;
+            letter-spacing: 1.5px;
+        }
+
+        .small-font {
+            font-size: 15px;
+            display: block;
+            margin-top: 10px;
+            font-weight: 500;
+            letter-spacing: 1.3px;
+        }
+
+        .custom-text {
+            font-family: "Lemon Milk";
+            font-size: 33px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .big-button:hover {
+            background-color: rgba(103, 69, 113, 0.773);
+            color: white;
+            transform: scale(1.1);
+            transition: transform .4s;
+        }
+
+        .clipped-line {
+            width: 50%; /* Set the desired width for the line */
+            margin: 15px auto; /* Center the line horizontally */
+            border: none;
+            height: 1.5px; /* Set the desired thickness for the line */
+            background-color: #333; /* Line color */
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="custom-text">What are you looking for?</p>
+    <hr class="clipped-line">
+    <h2>Select an option based on your financial knowledge</h2>
+    <button class="big-button" id="button1">Open Platform <span class="small-font">For individuals with a good understanding of finances</span></button>
+    <button class="big-button" id="button2">Personal Platform <span class="small-font">For individuals who don't know much about money stuff</span></button>
+
+    <script>
+        var button1 = document.getElementById("button1");
+        var button2 = document.getElementById("button2");
+
+        button1.addEventListener("click", function() {
+            window.location.href = "http://localhost:8000/open-platform";
+        });
+
+        button2.addEventListener("click", function() {
+            window.location.href = "http://localhost:8000/age";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!-- <html>
+<head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='index.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Landing Page</h1>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{ url_for('static', path='landing.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <div class="toTop" onclick="toTop()"></div> -->
+    <button id="toTop" onclick="scrollToTop()"></button>
+        <div class="welcome-section">
+        <div class="main-nav">
+            <img class="site-logo" src="static/img/sitelogo.png" alt="Softy Pinko"/>
+            <!-- <span class="nav-items"> -->
+            <a href="#welcome" class="active">Home</a>
+            <a href="#About" id="sA" onclick="scrollToAbout()">About</a>
+            <a href="#Features" id="sF" onclick="scrollToFeatures()">Features</a>
+            <a href="#Contact" id="sC" onclick="scrollToContact()">Contact</a>
+            <a href="#Dashboard">Dashboard</a>
+            <!-- </span> -->
+            
+        </div>
+        <div class="main-header">
+            <strong style="font-size:100px;">FinLit Solutions</strong>
+            <p style="font-size: 20px;">Financial Wisdom Unveiled: Navigating Lifelong Prosperity with Tailored Knowledge for Every Age and Gender</p>
+            <!-- <button class="button-17"><a href="http://localhost:3001/login">LOGIN/SIGNUP</a></button> -->
+            <!-- <button class="button-17" href="http://localhost:3001/login">LOGIN/SIGNUP</button> -->
+            <a href="http://localhost:8000/login" class="button-17">Get Started</a>
+        </div>
+    </div>
+    <div class="about-section">
+        <div class="container-about">
+            <h1>About Us</h1>
+            <p>Welcome to <strong>FinLit Solutions</strong>, your ultimate destination for unlocking the doors to financial empowerment and enlightenment. At FinLit Solutions, we firmly believe that financial literacy is not just a skill, but a fundamental right for individuals of all ages and genders. Our mission is to provide tailored financial knowledge and guidance that caters to the unique needs and aspirations of each individual, ensuring that everyone can embark on a journey towards financial success and security.</p>
+
+            <img src="static/img/circle-dec.png" alt="">
+        </div>
+    </div>
+    <div class="services-section">
+        <div class="container-serv">
+            <h1>What do we offer?</h1>
+            <div class="serv">
+                <div class="serv-opt"><img src="static/img/left-image.png" alt=""><h5>Secured Login</h5><p>Hassle free login/signup</p></div>
+                <div class="serv-opt"><img src="static/img/left-image.png" alt=""><h5>Personalied-Exp</h5><p>Financial knowledge provided according to your age group ,gender</p></div>
+                <div class="serv-opt"><img src="static/img/left-image.png" alt=""><h5>Video Tutorials</h5><p>Well structured video tutorials by professional</p></div>
+                <div class="serv-opt"><img src="static/img/left-image.png" alt=""><h5>Refined Content</h5><p>Highly curated financial knowledge of each topic</p></div>
+                <div class="serv-opt"><img src="static/img/left-image.png" alt=""><h5>Interactive Quiz</h5><p>Test your financial knowledge</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <h1>Get in touch</h1>
+        <p>Do get in touch with us for our daily updates and new features to smoothen your experiance.</p>
+
+        <form action="/connect" method = "POST">
+            <input type="email" placeholder="Email" name="email" />
+            <button type="submit">Join Us</button>
+        </form>
+    </div>
+    <footer>
+
+        <!-- <center> -->
+            <div class="icons">
+                <a href=""><img src="static/img/facebook.png" alt=""></a>
+                <a href=""><img src="static/img/insta.jpg" alt=""></a>
+                <a href=""><img src="static/img/twitter.png" alt=""></a>
+                <a href=""><img src="static/img/pintrest.png" alt=""></a>
+            </div>
+            
+        <!-- </center> -->
+        <center style="color: white;">
+            Made with ❤️ do support!
+        </center>
+        
+    </footer>
+<script src="{{ url_for('static', path='landing.js') }}"></script>
+
+</body>
+</html>

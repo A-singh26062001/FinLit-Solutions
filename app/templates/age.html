@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Redirect Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .center-row {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+        }
+
+        .big-button {
+            background-color: lightgrey;
+            color: black;
+            padding: 35px 35px;
+            cursor: pointer;
+            margin: 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50px;
+            border-color: black;  
+            border: 1.5px solid;
+            letter-spacing: 1.5px;
+        }
+
+        .big-button:hover {
+            background-color: rgb(213, 129, 239);
+            color: white;
+            transform: scale(1.1);
+            transition: transform .4s;
+        }
+
+        .custom-text {
+            font-family: "Lemon Milk";
+            font-size: 35px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="custom-text">You're</p>
+    <div class="center-row">
+    <button class="big-button" id="button1" value="1" >Below 18</button>
+    <button class="big-button" id="button2" value="2" >18 to 35</button>
+    <button class="big-button" id="button3" value="3" >Above 35</button>
+    </div>
+
+    <h2>Pick your age range</h2>
+
+    <script>
+        var button1 = document.getElementById("button1");
+        var button2 = document.getElementById("button2");
+        var button3 = document.getElementById("button3");
+
+
+        button1.addEventListener("click", function() {
+            window.location.href = "http://localhost:8000/age-group-1";
+        });
+
+        button2.addEventListener("click", function() {
+            window.location.href = "http://localhost:8000/age-group-2";
+        });
+        button3.addEventListener("click", function() {
+            window.location.href = "http://localhost:8000/age-group-3";
+        });
+    </script>
+</body>
+</html>
